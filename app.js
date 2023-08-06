@@ -21,5 +21,8 @@ app.use(bodyParser.json());
 // Routes
 app.use('/auth', authRoutes);
 
+app.get('/', (req, res) =>{
+  res.send('Server Running Perfectly');
+})
 // Start the server
 app.listen(port, () => console.log(`Server started on: ${port}`));

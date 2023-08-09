@@ -37,7 +37,7 @@ router.post('/register', async (req, res) => {
   }
 
   try {
-    const user = await User.create({ fname, lname, email, password });
+    const user = await User.create({ fname, lname, email, password, confirmPassword });
     // You can use a JWT token here for authentication
 
     res.json({ message: 'Registration successful' });
